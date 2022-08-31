@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{102DB307-9203-497B-9569-3628E5EF7BE2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ariel.CSharp.DesignPattern</RootNamespace>
+    <AssemblyName>Ariel.CSharp.DesignPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Creational\AbstractFactory\Ships\BigUFOShip.cs" />
+    <Compile Include="Creational\AbstractFactory\Ships\RocketEnemyShip.cs" />
+    <Compile Include="Creational\AbstractFactory\Ships\EnemyShip.cs" />
+    <Compile Include="Creational\AbstractFactory\EnemyShipFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\Ships\UFOEnemyShip.cs" />
+    <Compile Include="Creational\Builder\RobotBuilder\OldRobotBuilder.cs" />
+    <Compile Include="Creational\Builder\RobotEngineer.cs" />
+    <Compile Include="Creational\Builder\RobotDAO\Robot.cs" />
+    <Compile Include="Creational\Builder\RobotBuilder\IRobotBuilder.cs" />
+    <Compile Include="Creational\Builder\RobotDAO\IRobotPlain.cs" />
+    <Compile Include="Creational\CreationalDpMain.cs" />
+    <Compile Include="Creational\FactoryMethod\Products\ConcreteProduct2.cs" />
+    <Compile Include="Creational\FactoryMethod\Creators\ConcreteCreator1.cs" />
+    <Compile Include="Creational\FactoryMethod\Creators\ConcreteCreator2.cs" />
+    <Compile Include="Creational\FactoryMethod\Creators\Creator.cs" />
+    <Compile Include="Creational\FactoryMethod\Products\ConcreteProduct1 .cs" />
+    <Compile Include="Creational\FactoryMethod\Products\IProduct.cs" />
+    <Compile Include="Creational\Singleton\DoubleCheckLockSingleton.cs" />
+    <Compile Include="Creational\Singleton\NaiveSingleton.cs" />
+    <Compile Include="Creational\Singleton\SingletonABC.cs" />
+    <Compile Include="Creational\Singleton\SingletonThreadSafe.cs" />
+    <Compile Include="Creational\Singleton\ThreadSafeEagerSingleton.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
